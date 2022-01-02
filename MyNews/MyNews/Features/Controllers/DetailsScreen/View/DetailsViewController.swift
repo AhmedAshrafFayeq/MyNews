@@ -44,9 +44,3 @@ class DetailsViewController: UIViewController {
       WebviewHelper.launch(model?.url, with: self)
     }
 }
-
-private extension DetailsViewController {
-  
-  
-
-}
