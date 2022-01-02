@@ -67,7 +67,10 @@ private extension NewsViewController {
 private extension NewsViewController {
   
   func handleOnSelectArticle(viewModel: NewsCellViewModel) {
-    WebviewHelper.launch(viewModel.model.url, with: self)
+    //WebviewHelper.launch(viewModel.model.url, with: self)
+    let detailsViewController = DetailsViewController()
+    detailsViewController.model = viewModel.model
+    navigationController?.pushViewController(detailsViewController, animated: true)
   }
   
   func presentFilter() {

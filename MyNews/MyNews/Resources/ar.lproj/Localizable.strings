@@ -11,6 +11,7 @@
 "Country" = "البلد";
 "Category" = "النوع";
 "Search articles" = "بحث المقالات";
+"openInSafari" = "اقرأ المزيد";
 
 // MARK: - Categories
 "Business" = "تجارة";

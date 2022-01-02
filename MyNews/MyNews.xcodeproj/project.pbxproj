@@ -114,6 +114,8 @@
 		2D17AD8B2781CE9C00CCF963 /* FavoriteScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17AD8A2781CE9C00CCF963 /* FavoriteScreenViewModel.swift */; };
 		2D17AD8F2781CEAA00CCF963 /* FavoriteScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17AD8D2781CEA900CCF963 /* FavoriteScreenViewController.swift */; };
 		2D17AD902781CEAA00CCF963 /* FavoriteScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D17AD8E2781CEAA00CCF963 /* FavoriteScreenViewController.xib */; };
+		2D17ADA42781EDFB00CCF963 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17ADA22781EDFB00CCF963 /* DetailsViewController.swift */; };
+		2D17ADA52781EDFB00CCF963 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D17ADA32781EDFB00CCF963 /* DetailsViewController.xib */; };
 		B812822730FA9B700BB46FA5 /* Pods_MyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1242AE9FBB318E909689C68 /* Pods_MyNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -229,6 +231,8 @@
 		2D17AD8A2781CE9C00CCF963 /* FavoriteScreenViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteScreenViewModel.swift; sourceTree = "<group>"; };
 		2D17AD8D2781CEA900CCF963 /* FavoriteScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteScreenViewController.swift; sourceTree = "<group>"; };
 		2D17AD8E2781CEAA00CCF963 /* FavoriteScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteScreenViewController.xib; sourceTree = "<group>"; };
+		2D17ADA22781EDFB00CCF963 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		2D17ADA32781EDFB00CCF963 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 		C1242AE9FBB318E909689C68 /* Pods_MyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CFC920108D49E6C4BF64C2 /* Pods-MyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNews.debug.xcconfig"; path = "Target Support Files/Pods-MyNews/Pods-MyNews.debug.xcconfig"; sourceTree = "<group>"; };
 		F8DE4F5941AD3BE5D5E53232 /* Pods-MyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNews.release.xcconfig"; path = "Target Support Files/Pods-MyNews/Pods-MyNews.release.xcconfig"; sourceTree = "<group>"; };
@@ -330,6 +334,7 @@
 		2D17AB9C2781050600CCF963 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2D17AD9F2781ECD400CCF963 /* DetailsScreen */,
 				2D17AD872781CE7700CCF963 /* FavoriteScreen */,
 				2D17ACD72781BA4400CCF963 /* News */,
 				2D17ACC82781B86200CCF963 /* NewsFilter */,
@@ -668,6 +673,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2D17AD9F2781ECD400CCF963 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2D17ADA02781ECE700CCF963 /* View */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		2D17ADA02781ECE700CCF963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D17ADA22781EDFB00CCF963 /* DetailsViewController.swift */,
+				2D17ADA32781EDFB00CCF963 /* DetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EA43B4D70BD91A618107CB43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +777,7 @@
 				2D17AD122781C84300CCF963 /* SearchViewController.xib in Resources */,
 				2D17AD442781C9DA00CCF963 /* ActionsFooterView.xib in Resources */,
 				2D17ACF32781C58B00CCF963 /* NewsCell.xib in Resources */,
+				2D17ADA52781EDFB00CCF963 /* DetailsViewController.xib in Resources */,
 				2D17AB752780FA3900CCF963 /* Assets.xcassets in Resources */,
 				2D17AD1B2781C86C00CCF963 /* EmptyStateViewController.xib in Resources */,
 			);
@@ -820,6 +843,7 @@
 				2D17AD332781C9BA00CCF963 /* StretchyTableHeaderView.swift in Sources */,
 				2D17AD832781CD9900CCF963 /* Disposable.swift in Sources */,
 				2D17AD782781CCF700CCF963 /* UIView+Helpers.swift in Sources */,
+				2D17ADA42781EDFB00CCF963 /* DetailsViewController.swift in Sources */,
 				2D17ACB92781B3D600CCF963 /* AppTab.swift in Sources */,
 				2D17ACEF2781BB5C00CCF963 /* NewsCell.swift in Sources */,
 				2D17AD682781CB7000CCF963 /* String+LocalizedBundleTableName.swift in Sources */,

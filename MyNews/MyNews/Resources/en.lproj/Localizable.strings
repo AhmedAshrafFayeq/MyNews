@@ -11,6 +11,7 @@
 "Countries" = "Countries";
 "Categories" = "Categories";
 "Search articles" = "Search articles";
+"openInSafari" = "Read More";
 
 // MARK: - Categories
 "Business" = "Business";
@@ -24,6 +25,5 @@
 // MARK: - TabBar
 "News" = "News";
 "Favorite" = "Favorite";
-
 
 "We're sorry, we couldn't find results" = "We're sorry, we couldn't find results";
