@@ -116,6 +116,7 @@
 		2D17AD902781CEAA00CCF963 /* FavoriteScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D17AD8E2781CEAA00CCF963 /* FavoriteScreenViewController.xib */; };
 		2D17ADA42781EDFB00CCF963 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D17ADA22781EDFB00CCF963 /* DetailsViewController.swift */; };
 		2D17ADA52781EDFB00CCF963 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D17ADA32781EDFB00CCF963 /* DetailsViewController.xib */; };
+		2D17ADB52782237B00CCF963 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2D17ADB42782237B00CCF963 /* README.md */; };
 		B812822730FA9B700BB46FA5 /* Pods_MyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1242AE9FBB318E909689C68 /* Pods_MyNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +234,7 @@
 		2D17AD8E2781CEAA00CCF963 /* FavoriteScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoriteScreenViewController.xib; sourceTree = "<group>"; };
 		2D17ADA22781EDFB00CCF963 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		2D17ADA32781EDFB00CCF963 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		2D17ADB42782237B00CCF963 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C1242AE9FBB318E909689C68 /* Pods_MyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CFC920108D49E6C4BF64C2 /* Pods-MyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNews.debug.xcconfig"; path = "Target Support Files/Pods-MyNews/Pods-MyNews.debug.xcconfig"; sourceTree = "<group>"; };
 		F8DE4F5941AD3BE5D5E53232 /* Pods-MyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNews.release.xcconfig"; path = "Target Support Files/Pods-MyNews/Pods-MyNews.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		2D17AB672780FA3100CCF963 /* MyNews */ = {
 			isa = PBXGroup;
 			children = (
+				2D17ADAF27821C4900CCF963 /* Docs */,
 				2D17AB742780FA3900CCF963 /* Assets.xcassets */,
 				2D17AB792780FA3900CCF963 /* Info.plist */,
 				2D17AD702781CCE000CCF963 /* Extensions */,
@@ -690,6 +693,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2D17ADAF27821C4900CCF963 /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				2D17ADB42782237B00CCF963 /* README.md */,
+			);
+			path = Docs;
+			sourceTree = "<group>";
+		};
 		EA43B4D70BD91A618107CB43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -779,6 +790,7 @@
 				2D17ACF32781C58B00CCF963 /* NewsCell.xib in Resources */,
 				2D17ADA52781EDFB00CCF963 /* DetailsViewController.xib in Resources */,
 				2D17AB752780FA3900CCF963 /* Assets.xcassets in Resources */,
+				2D17ADB52782237B00CCF963 /* README.md in Resources */,
 				2D17AD1B2781C86C00CCF963 /* EmptyStateViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
