@@ -8,7 +8,8 @@
 import Foundation
 
 // MARK: - ProgressViewType
+//
 @objc enum ProgressViewType: Int {
-  case view
-  case fullscreen
+    case view
+    case fullscreen
 }

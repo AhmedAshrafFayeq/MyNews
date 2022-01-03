@@ -10,6 +10,7 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     // MARK: - Outlets
+    //
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -17,10 +18,12 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     // MARK: - Properties
+    //
     var model: StorageNews?
     
     
     // MARK: - Lifecycle
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         addNavigationButton()
@@ -40,7 +43,8 @@ class DetailsViewController: UIViewController {
         dateLabel.text = model?.publishedAt
         sourceLabel.text = model?.sourceNewsName
     }
+    
     @objc func openArticalInSafari() {
-      WebviewHelper.launch(model?.url, with: self)
+        WebviewHelper.launch(model?.url, with: self)
     }
 }

@@ -40,7 +40,7 @@ class NewsCell: UITableViewCell {
     override func awakeFromNib() {
         setupStarbuttonClick()
     }
-        
+    
     // MARK: - Handlers
     //
     func setupStarbuttonClick() {
