@@ -15,3 +15,7 @@
   
 * State
   - State pattern was applied in SearchViewController to handle the different states of the result controller that manage showing the news depending on search or fetching from api 
+  
+  * Languages
+  - Localization was used to handle phone's language if (Arabic or English)
+  

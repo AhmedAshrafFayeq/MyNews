@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stretchyHeader" translatesAutoresizingMaskIntoConstraints="NO" id="syt-oE-gi8">
-                                <rect key="frame" x="0.0" y="53" width="414" height="800"/>
+                                <rect key="frame" x="0.0" y="-47" width="414" height="800"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="AppPrimary"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syt-oE-gi8" secondAttribute="trailing" id="3wa-hG-aUy"/>
-                            <constraint firstItem="syt-oE-gi8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="FGu-nD-lzr"/>
+                            <constraint firstItem="syt-oE-gi8" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="FGu-nD-lzr"/>
                             <constraint firstItem="syt-oE-gi8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nlX-5L-gm6"/>
                             <constraint firstItem="syt-oE-gi8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yax-BA-4RT"/>
                         </constraints>
@@ -38,7 +38,7 @@
     <resources>
         <image name="stretchyHeader" width="800" height="800"/>
         <namedColor name="AppPrimary">
-            <color red="0.18824160100000004" green="0.42279148325923616" blue="0.56472480300000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.18799999356269836" green="0.42300000786781311" blue="0.56499999761581421" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

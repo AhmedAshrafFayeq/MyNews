@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 class NewsViewController: UIViewController {
-  
-  
+
   // MARK: - Outlets
   
   @IBOutlet weak var contentView: UIView!
@@ -33,9 +32,7 @@ class NewsViewController: UIViewController {
       cellSeparator: .singleLine
     )
   }()
-  
-  
-  
+   
   // MARK: - ViewLifecycle
   
   override func viewDidLoad() {
@@ -67,7 +64,6 @@ private extension NewsViewController {
 private extension NewsViewController {
   
   func handleOnSelectArticle(viewModel: NewsCellViewModel) {
-    //WebviewHelper.launch(viewModel.model.url, with: self)
     let detailsViewController = DetailsViewController()
     detailsViewController.model = viewModel.model
     navigationController?.pushViewController(detailsViewController, animated: true)
