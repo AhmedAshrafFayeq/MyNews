@@ -14,7 +14,7 @@ class AppCoordinator {
   private var isLoggedIn: Bool?
   
   // MARK: - Properties
-  
+  //
   let navigationController: UINavigationController
   
   /// Tab Bar Controller
@@ -31,7 +31,7 @@ class AppCoordinator {
   }
   
   // MARK: - Start
-  
+  //
   func start() {
     
     guard let _ = ServiceLocator.defaultFilter else {

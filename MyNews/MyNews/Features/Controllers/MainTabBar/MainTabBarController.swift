@@ -23,11 +23,9 @@ class MainTabBarController: UITabBarController {
     configureTabViewControllers()
     configureTabBarItems()
   }
-
-
   
   // MARK: - Lifecycle
-  
+  //
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -70,4 +68,3 @@ private extension MainTabBarController {
     favoritesViewController.navigationController?.tabBarItem = favoritesTab
   }
 }
-

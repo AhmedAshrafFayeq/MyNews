@@ -10,12 +10,11 @@ import Foundation
 // MARK: - NewsCellRepresentable
 //
 protocol NewsCellRepresentable {
-  
-  var title: String? { get }
-  var description: String? { get }
-  var date: String? { get }
-  var source: String? { get }
-  var imageURL: String? { get }
-  var isFavorite: Bool? { get }
+    
+    var title: String? { get }
+    var description: String? { get }
+    var date: String? { get }
+    var source: String? { get }
+    var imageURL: String? { get }
+    var isFavorite: Bool? { get }
 }
-
