@@ -30,7 +30,7 @@ class FormViewController: Eureka.FormViewController {
     let disposeBag = DisposeBag()
     
     // MARK: - Init
-    
+    //
     init() {
         let style: UITableView.Style = {
             guard #available(iOS 13.0, *) else { return .plain }
@@ -44,7 +44,7 @@ class FormViewController: Eureka.FormViewController {
     }
     
     // MARK: - Lifecycle
-    
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +59,7 @@ class FormViewController: Eureka.FormViewController {
     }
     
     // MARK: - Overridden Properties
-    
+    //
     override var progressType: ProgressViewType {
         return .fullscreen
     }
@@ -91,7 +91,6 @@ extension FormViewController {
         if shouldScrollToFirstError {
             scrollToFirstError()
         }
-        
         return errors
     }
     
