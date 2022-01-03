@@ -13,7 +13,7 @@ import UIKit
 /// the `configure` method.
 ///
 final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentProvider {
-
+    
     /// The main message shown at the top.
     ///
     @IBOutlet private var messageLabel: UILabel! {
@@ -22,7 +22,7 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             messageLabel.text = nil
         }
     }
-
+    
     /// An image shown below the message.
     ///
     @IBOutlet private var imageView: UIImageView! {
@@ -31,7 +31,7 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             imageView.isHidden = true
         }
     }
-
+    
     /// Additional text shown below the image.
     ///
     @IBOutlet private var detailsLabel: UILabel! {
@@ -40,7 +40,7 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             detailsLabel.isHidden = true
         }
     }
-
+    
     /// The button shown below the detail text.
     ///
     @IBOutlet private var actionButton: UIButton! {
@@ -49,14 +49,14 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             actionButton.isHidden = true
         }
     }
-
+    
     /// The scrollable view which contains the `contentView`.
     ///
     @IBOutlet private var scrollView: UIScrollView!
     /// The child of the scrollView containing all the content (labels, image, etc).
     ///
     @IBOutlet private var contentView: UIView!
-
+    
     /// The height adjustment constraint for the content view.
     ///
     /// The contentView's height = superview's height + offset/adjustment. Only the
@@ -66,65 +66,65 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
     /// text (message) is too big.
     ///
     @IBOutlet private var contentViewHeightFromSuperviewConstraint: NSLayoutConstraint!
-
+    
     /// The configured style for this view.
     ///
     private let style: Style
-
+    
     /// The handler to execute when the button is tapped.
     ///
     /// This is normally set up in `configure()`.
     ///
     private var lastActionButtonTapHandler: (() -> Void)?
-
+    
     private lazy var keyboardFrameObserver = KeyboardFrameObserver(onKeyboardFrameUpdate: { [weak self] frame in
         self?.handleKeyboardFrameUpdate(keyboardFrame: frame)
         self?.verticallyAlignStackViewUsing(keyboardHeight: frame.height)
     })
-
+    
     /// Required implementation by `KeyboardFrameAdjustmentProvider`.
     var additionalKeyboardFrameHeight: CGFloat = 0
-
+    
     init(style: Style = .basic) {
         self.style = style
         super.init(nibName: type(of: self).nibName, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("Not supported.")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = style.backgroundColor
         contentView.backgroundColor = style.backgroundColor
-
-      messageLabel.textColor = .blue
-//        detailsLabel.applySecondaryBodyStyle()
-
+        
+        messageLabel.textColor = .blue
+        //        detailsLabel.applySecondaryBodyStyle()
+        
         keyboardFrameObserver.startObservingKeyboardFrame(sendInitialEvent: true)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         updateImageVisibilityUsing(traits: traitCollection)
     }
-
+    
     /// Configure the elements to be displayed.
     ///
     func configure(_ config: Config) {
         messageLabel.attributedText = config.message
-
+        
         imageView.image = config.image
         updateImageVisibilityUsing(traits: traitCollection)
-
+        
         detailsLabel.text = config.details
         detailsLabel.isHidden = config.details == nil
-
+        
         configureActionButton(config)
-
+        
         lastActionButtonTapHandler = {
             switch config {
             case .withLink(_, _, _, _, let linkURL):
@@ -140,18 +140,18 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             }
         }()
     }
-
+    
     /// Watch for device orientation changes and update the `imageView`'s visibility accordingly.
     ///
     override func willTransition(to newCollection: UITraitCollection,
                                  with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
-
+        
         coordinator.animate(alongsideTransition: { _ in
             self.updateImageVisibilityUsing(traits: newCollection)
         }, completion: nil)
     }
-
+    
     /// Hide the `imageView` if there is not enough vertical space (e.g. iPhone landscape).
     ///
     private func updateImageVisibilityUsing(traits: UITraitCollection) {
@@ -159,7 +159,7 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             imageView.image != nil
         imageView.isHidden = !shouldShowImageView
     }
-
+    
     /// Update the `contentViewHeightConstraint` so that the StackView is kept vertically centered.
     ///
     /// This routine decreases the height constraint so that it will fit in the available space
@@ -172,17 +172,17 @@ final class EmptyStateViewController: UIViewController, KeyboardFrameAdjustmentP
             guard keyboardHeight > 0 else {
                 return 0
             }
-
+            
             // Adjust the keyboard height using any adjustment given by a parent ViewController
             // (e.g. SearchViewController).
             let keyboardHeight = keyboardHeight + additionalKeyboardFrameHeight
-
+            
             return 0 - keyboardHeight
         }()
-
+        
         contentViewHeightFromSuperviewConstraint.constant = constraintConstant
     }
-
+    
     /// OnTouchUpInside handler for the `actionButton`.
     @IBAction private func actionButtonTapped(_ sender: Any) {
         lastActionButtonTapHandler?()
@@ -199,7 +199,7 @@ private extension EmptyStateViewController {
             actionButton.isHidden = true
         case .withLink(_, _, _, let title, _), .withButton(_, _, _, let title, _):
             actionButton.isHidden = false
-//            actionButton.applyPrimaryButtonStyle()
+            //            actionButton.applyPrimaryButtonStyle()
             actionButton.setTitle(title, for: .normal)
         }
     }
@@ -225,7 +225,7 @@ extension EmptyStateViewController {
         case basic
         /// Shows a gray background.
         case list
-
+        
         fileprivate var backgroundColor: UIColor {
             switch self {
             case .basic:
@@ -235,7 +235,7 @@ extension EmptyStateViewController {
             }
         }
     }
-
+    
     /// The configuration for this Empty State View
     ///
     /// The options like `simple`, `withLink`, etc define the standard behaviors or styles that
@@ -250,7 +250,7 @@ extension EmptyStateViewController {
         /// Show a message and image only.
         ///
         case simple(message: NSAttributedString, image: UIImage)
-
+        
         /// Show all the elements and a prominent button which navigates to a URL when activated.
         ///
         /// - Parameters:
@@ -258,7 +258,7 @@ extension EmptyStateViewController {
         ///     - linkURL: The URL that will be navigated to when the `actionButton` is activated.
         ///
         case withLink(message: NSAttributedString, image: UIImage, details: String, linkTitle: String, linkURL: URL)
-
+        
         /// Show all the elements and a prominent button which calls back the provided closure when tapped.
         ///
         /// - Parameters:
@@ -266,7 +266,7 @@ extension EmptyStateViewController {
         ///     - onTap: Closure to be executed when the button is tapped.
         ///
         case withButton(message: NSAttributedString, image: UIImage, details: String, buttonTitle: String, onTap: () -> Void)
-
+        
         /// The font used by the message's `UILabel`.
         ///
         /// This is exposed so that consumers can build `NSAttributedString` instances using the same
@@ -274,10 +274,10 @@ extension EmptyStateViewController {
         ///
         /// This must match the `applyBodyStyle()` call in `viewDidLoad`.
         ///
-//        static let messageFont: UIFont = .body
-//      
-//        static let bold: UIFont = .bold
-
+        //        static let messageFont: UIFont = .body
+        //
+        //        static let bold: UIFont = .bold
+        
         fileprivate var message: NSAttributedString {
             switch self {
             case .simple(let message, _),
@@ -286,7 +286,7 @@ extension EmptyStateViewController {
                 return message
             }
         }
-
+        
         fileprivate var image: UIImage {
             switch self {
             case .simple(_, let image),
@@ -295,7 +295,7 @@ extension EmptyStateViewController {
                 return image
             }
         }
-
+        
         fileprivate var details: String? {
             switch self {
             case .simple:

@@ -63,7 +63,6 @@ private extension MainTabBarController {
    
     let newsTab = UITabBarItem(title: "News".localized, image: Asset.homeTabIcon.image, selectedImage: nil)
     newsViewController.navigationController?.tabBarItem = newsTab
-    
     let favoritesTab = UITabBarItem(title: "Favorite".localized, image: Asset.favoriteTabIcon.image, selectedImage: nil)
     favoritesViewController.navigationController?.tabBarItem = favoritesTab
   }
